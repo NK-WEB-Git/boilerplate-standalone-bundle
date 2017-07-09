@@ -1,3 +1,4 @@
 services:
     custom_standalone.check_even_number:
-        class: Custom\StandaloneBundle\Services\CustomService  
+        class: Custom\StandaloneBundle\Services\CustomService
+        arguments: [%number%]

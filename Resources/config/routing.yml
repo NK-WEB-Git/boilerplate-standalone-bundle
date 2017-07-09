@@ -1,4 +1,9 @@
-custom_standalone–hello:
+custom_standalone_hello:
     path: /
     defaults:
         _controller: CustomStandaloneBundle:Hello:view
+
+custom_standalone_custom:
+    path: /custom
+    defaults:
+        _controller: CustomStandaloneBundle:Custom:view        

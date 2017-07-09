@@ -1,0 +1,4 @@
+custom_standalone–hello:
+    path: /
+    defaults:
+        _controller: CustomStandaloneBundle:Hello:view

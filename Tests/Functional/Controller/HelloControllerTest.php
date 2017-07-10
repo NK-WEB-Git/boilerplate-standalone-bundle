@@ -29,4 +29,20 @@ class HelloControllerTest extends WebTestCase
         $this->client->request('GET', '/');
         $this->assertTrue($this->client->getResponse()->isSuccessful());
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    /* protected function onNotSuccessfulTest(Exception $exception)
+    {
+        $message = null;
+        if ($this->client->getCrawler()) {
+            $message = preg_replace('#\s{2,}#', '', $this->client->getCrawler()->filter('.text-exception')->text());
+        }
+        if ($message) {
+            $exceptionClass = get_class($exception);
+            throw new $exceptionClass($exception->getMessage() . ' | ' . $message);
+        }
+        throw $exception;
+    }*/
 }

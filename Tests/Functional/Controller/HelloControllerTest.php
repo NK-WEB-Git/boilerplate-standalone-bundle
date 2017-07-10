@@ -1,6 +1,7 @@
 <?php
  
 namespace Custom\StandaloneBundle\Tests\Functional\Controller;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  
 use Custom\StandaloneBundle\Tests\WebTestCase;
  
@@ -24,8 +25,8 @@ class HelloControllerTest extends WebTestCase
  
     public function testViewAction()
     {
+        $this->expectException(NotFoundHttpException::class);
         $this->client->request('GET', '/');
- 
         $this->assertTrue($this->client->getResponse()->isSuccessful());
     }
 }
